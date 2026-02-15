@@ -9,7 +9,7 @@ const {data} = useContext(recipieContext);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
+      
       <div className="bg-orange-500 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold">Our Recipes</h1>
@@ -17,7 +17,7 @@ const {data} = useContext(recipieContext);
         </div>
       </div>
 
-      {/* Recipes Grid */}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {data.length === 0 ? (
           <div className="text-center py-12">
@@ -30,7 +30,7 @@ const {data} = useContext(recipieContext);
                 key={recipe.id} 
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105"
               >
-                {/* Recipe Image */}
+               
                 <div className="relative h-48 overflow-hidden bg-gray-200">
                   <img 
                     src={recipe.image} 
@@ -42,7 +42,7 @@ const {data} = useContext(recipieContext);
                   </div>
                 </div>
 
-                {/* Recipe Info */}
+               
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 capitalize">{recipe.title}</h3>
                   
@@ -50,7 +50,7 @@ const {data} = useContext(recipieContext);
                   
                   <p className="text-gray-700 text-sm mb-4 line-clamp-2 capitalize">{recipe.description.slice(0, 100)} {recipe.description.length > 100 ? "..." : ""}</p>
 
-                  {/* View Button */}
+                  
                   <Link to={`/single-recipe/${recipe.id}`} className="px-4 py-2 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition block text-center">
                     View Recipe
                   </Link>

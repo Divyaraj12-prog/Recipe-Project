@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
+      
       <div className="bg-orange-500 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold">About RecipeMaster</h1>
@@ -12,7 +12,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Mission Section */}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
           <div>
@@ -30,11 +30,11 @@ const About = () => {
           </div>
         </div>
 
-        {/* Values Section */}
+        
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Value 1 */}
+           
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
               <div className="text-4xl mb-4">🌮</div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">Diversity</h3>
@@ -43,7 +43,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Value 2 */}
+            
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
               <div className="text-4xl mb-4">✨</div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">Quality</h3>
@@ -52,7 +52,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Value 3 */}
+            
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">Community</h3>
@@ -63,7 +63,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Story Section */}
+        
         <div className="bg-orange-50 rounded-lg p-8 md:p-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -78,7 +78,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Contact Section */}
+      
       <div className="bg-orange-500 text-white py-12 mt-12">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>

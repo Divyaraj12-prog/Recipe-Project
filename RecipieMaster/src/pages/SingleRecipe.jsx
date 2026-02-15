@@ -43,7 +43,7 @@ const SingleRecipe = () => {
         <div className="min-h-screen bg-gray-50 overflow-hidden">
             {recipe ? (
                 <>
-                    {/* Header */}
+                    
                     <div className="bg-orange-500 text-white py-8">
                         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                             <button 
@@ -57,10 +57,10 @@ const SingleRecipe = () => {
                         </div>
                     </div>
 
-                    {/* Recipe Content */}
+                   
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <div className="grid md:grid-cols-3 gap-8">
-                            {/* Image and Category */}
+                           
                             <div className="md:col-span-1">
                                 <div className="relative">
                                     <img 
@@ -74,15 +74,14 @@ const SingleRecipe = () => {
                                 </div>
                             </div>
 
-                            {/* Recipe Details */}
+                            
                             <div className="md:col-span-2">
-                                {/* Description */}
+                              
                                 <div className="mb-8">
                                     <h2 className="text-2xl font-bold text-gray-800 mb-4">About this Recipe</h2>
                                     <p className="text-gray-700 text-lg leading-relaxed capitalize">{recipe.description.trim()}</p>
                                 </div>
 
-                                {/* Ingredients */}
                                 <div className="mb-8 bg-orange-50 p-6 rounded-lg">
                                     <h3 className="text-xl font-bold text-gray-800 mb-4">Ingredients</h3>
                                     <ul className="space-y-2">
@@ -95,7 +94,7 @@ const SingleRecipe = () => {
                                     </ul>
                                 </div>
 
-                                {/* Instructions */}
+                        
                                 <div className="mb-8">
                                     <h3 className="text-xl font-bold text-gray-800 mb-4">Instructions</h3>
                                     <ol className="space-y-3">
@@ -110,7 +109,7 @@ const SingleRecipe = () => {
                                     </ol>
                                 </div>
 
-                                {/* Action Buttons */}
+                            
                                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
                                     <button 
                                         onClick={() => updateHandler(recipe)} 
@@ -128,7 +127,7 @@ const SingleRecipe = () => {
                             </div>
                         </div>
 
-                        {/* Update Form Modal */}
+                       
                         {updateRecipeId === recipe.id && (
                             <div className="mt-12 bg-white rounded-lg shadow-lg p-8 border-l-4 border-blue-500 overflow-auto max-h-screen">
                                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Edit Recipe</h3>

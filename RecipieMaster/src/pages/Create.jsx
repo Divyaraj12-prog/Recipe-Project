@@ -60,7 +60,7 @@ const Create = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Header */}
+            
             <div className="bg-orange-500 text-white py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h1 className="text-4xl md:text-5xl font-bold">Create Your Recipe</h1>
@@ -68,11 +68,11 @@ const Create = () => {
                 </div>
             </div>
 
-            {/* Form Section */}
+            
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <form onSubmit={handleSubmit(Submit)} className="bg-white rounded-lg shadow-lg p-8">
 
-                    {/* Image URL Input */}
+                    
                     <div className="mb-8">
                         <label className="block text-gray-800 font-semibold mb-2">Recipe Image URL</label>
                         <input
@@ -86,7 +86,7 @@ const Create = () => {
                         {errors.imageUrl && <p className="text-red-500 text-sm mt-1">{errors.imageUrl.message}</p>}
                         <p className="text-gray-500 text-sm mt-2">Copy the Image Address of your Picture and Paste it here</p>
 
-                        {/* Image Preview */}
+                        
                         {imageUrlValue && (
                             <div className="mt-4">
                                 <img
@@ -101,7 +101,7 @@ const Create = () => {
                         )}
                     </div>
 
-                    {/* Recipe Title */}
+                    
                     <div className="mb-8">
                         <label className="block text-gray-800 font-semibold mb-2">Recipe Title *</label>
                         <input
@@ -113,7 +113,7 @@ const Create = () => {
                         {errors.recipeTitle && <p className="text-red-500 text-sm mt-1">{errors.recipeTitle.message}</p>}
                     </div>
 
-                    {/* Chef Name */}
+                    
                     <div className="mb-8">
                         <label className="block text-gray-800 font-semibold mb-2">Chef Name *</label>
                         <input
@@ -125,7 +125,7 @@ const Create = () => {
                         {errors.chefName && <p className="text-red-500 text-sm mt-1">{errors.chefName.message}</p>}
                     </div>
 
-                    {/* Category */}
+                   
                     <div className="mb-8">
                         <label className="block text-gray-800 font-semibold mb-2">Category *</label>
                         <select
@@ -141,7 +141,7 @@ const Create = () => {
                         {errors.category && <p className="text-red-500 text-sm mt-1">{errors.category.message}</p>}
                     </div>
 
-                    {/* Description */}
+                  
                     <div className="mb-8">
                         <label className="block text-gray-800 font-semibold mb-2">Description *</label>
                         <textarea
@@ -154,7 +154,6 @@ const Create = () => {
                         <p className="text-gray-500 text-sm mt-2">Share your thoughts and tips about this recipe</p>
                     </div>
 
-                    {/* Ingredients */}
                     <div className="mb-8">
                         <label className="block text-gray-800 font-semibold mb-2">Ingredients *</label>
                         <textarea
@@ -167,7 +166,7 @@ const Create = () => {
                         <p className="text-gray-500 text-sm mt-2">Separate each ingredient with a comma</p>
                     </div>
 
-                    {/* Instructions */}
+                   
                     <div className="mb-8">
                         <label className="block text-gray-800 font-semibold mb-2">Instructions *</label>
                         <textarea
@@ -180,7 +179,7 @@ const Create = () => {
                         <p className="text-gray-500 text-sm mt-2">Separate each step with a comma</p>
                     </div>
 
-                    {/* Form Actions */}
+                   
                     <div className="flex flex-col sm:flex-row gap-4">
                         <button
                             type="submit"
@@ -197,7 +196,7 @@ const Create = () => {
                     </div>
                 </form>
 
-                {/* Info Box */}
+              
                 <div className="mt-8 bg-orange-50 border-l-4 border-orange-500 rounded-lg p-6">
                     <h3 className="font-bold text-gray-800 mb-2">Tips for Creating a Great Recipe Post</h3>
                     <ul className="list-disc list-inside text-gray-700 space-y-1">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div className="min-h-screen bg-linear-to-b from-orange-50 to-white">
-      {/* Hero Section */}
+      
       <div className="relative bg-linear-to-r from-orange-500 to-red-500 text-white py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -41,25 +41,25 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Features Section */}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Why Choose RecipeMaster?</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Feature 1 */}
+         
           <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
             <div className="text-4xl mb-4">📚</div>
             <h3 className="text-xl font-bold mb-4 text-gray-800">Vast Collection</h3>
             <p className="text-gray-600">Thousands of recipes from different cuisines and cultures at your fingertips.</p>
           </div>
 
-          {/* Feature 2 */}
+          
           <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
             <div className="text-4xl mb-4">👨‍🍳</div>
             <h3 className="text-xl font-bold mb-4 text-gray-800">Expert Chefs</h3>
             <p className="text-gray-600">Learn from professional chefs and experienced home cooks sharing their expertise.</p>
           </div>
 
-          {/* Feature 3 */}
+          
           <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
             <div className="text-4xl mb-4">⭐</div>
             <h3 className="text-xl font-bold mb-4 text-gray-800">Easy to Follow</h3>
@@ -68,7 +68,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
+      
       <div className="bg-orange-500 text-white py-12">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold mb-4">Ready to Cook Something Amazing?</h2>

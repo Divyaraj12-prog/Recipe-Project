@@ -8,13 +8,13 @@ const Navbar = () => {
         <nav className="bg-orange-500 text-white shadow-lg sticky top-0 z-50 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    {/* Logo */}
+                    
                     <div className="flex items-center">
                         <span className="text-2xl font-bold mr-2">🍳</span>
                         <span className="text-2xl font-bold">RecipeMaster</span>
                     </div>
 
-                    {/* Desktop Navigation */}
+                    
                     <div className="hidden md:flex space-x-8">
                         <NavLink
                             to="/"
@@ -58,7 +58,7 @@ const Navbar = () => {
                         </NavLink>
                     </div>
 
-                    {/* Mobile Menu Button */}
+                    
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="md:hidden flex flex-col space-y-1"
@@ -70,7 +70,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Navigation */}
+            
             {isMenuOpen && (
                 <div className="md:hidden bg-orange-600 px-4 pt-2 pb-4 space-y-3">
                     <NavLink
