@@ -33,3 +33,36 @@ Vercel App :- (https://recipe-project-orcin.vercel.app/)
 - 🎨 CSS (responsive UI)
 
 ---
+
+
+## 🧠 Concepts Used
+
+- React component hierarchy
+- Props for component communication
+- Context API for global state management
+- React Router for dynamic navigation
+- Controlled form handling
+- Conditional rendering
+
+---
+
+📌 Notes
+
+This project currently stores recipes in memory using Context; it does not persist data in a backend or database.
+
+Image uploads are simulated using local browser state.
+
+🛠 Future Improvements
+
+Here’s what could be added next:
+
+✅ Integrate a backend (Node/Express + database)
+✅ Add recipe editing & deletion
+✅ Add filtering and search
+✅ Save images via uploads to storage
+✅ Add authentication for personalized recipe lists
+
+👤 Author
+
+Divyaraj Purohit
+Aspiring Full Stack Developer
