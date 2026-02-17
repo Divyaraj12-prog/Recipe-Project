@@ -3,13 +3,13 @@ import { useContext, useState } from 'react'
 import { recipieContext } from '../context/Wrapper'
 import { useParams, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { set } from 'react-hook-form'
 
 const SingleRecipe = () => {
-    const { data, setdata, updateRecipeId, setUpdateRecipeId, updateFormData, setUpdateFormData } = useContext(recipieContext);
+    const { data, setdata, updateRecipeId, setUpdateRecipeId, updateFormData, setUpdateFormData, isFavourite, setisFavourite } = useContext(recipieContext);
     const params = useParams();
     const navigate = useNavigate();
-    
-    
+
     const recipe = data.find((item) => item.id === params.id);
 
     const deleteHandler = (id) => {
@@ -34,6 +34,17 @@ const SingleRecipe = () => {
         toast.success("Recipe updated successfully!")
     }
 
+    const favourite = (id) => {
+        if (isFavourite.includes(id)) {
+            const updatedFavourites = isFavourite.filter(fav => fav !== id);
+            setisFavourite(updatedFavourites);
+            localStorage.setItem("favourite", JSON.stringify(updatedFavourites));
+        } else {
+            setisFavourite([...isFavourite, id]);
+            localStorage.setItem("favourite", JSON.stringify([...isFavourite, id]));
+        }
+    }
+    
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setUpdateFormData({ ...updateFormData, [name]: value });
@@ -75,11 +86,28 @@ const SingleRecipe = () => {
                             </div>
 
                             
+
+                            
                             <div className="md:col-span-2">
                               
                                 <div className="mb-8">
                                     <h2 className="text-2xl font-bold text-gray-800 mb-4">About this Recipe</h2>
                                     <p className="text-gray-700 text-lg leading-relaxed capitalize">{recipe.description.trim()}</p>
+                                </div>
+
+                                <div className="flex items-center gap-4 mb-8">
+                                    <button 
+                                        onClick={() => favourite(recipe.id)}
+                                        className="text-4xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                                    >
+                                        {isFavourite.includes(recipe.id) ? (
+                                            <span className="text-red-500">❤</span>
+                                            
+                                        ) : (
+                                            <span className="text-gray-400 hover:text-red-400">♡ <span className='text-2xl'>Add to Favourites</span></span>
+                                        )}
+                                    </button>
+                                    {isFavourite.includes(recipe.id) && <p className="text-red-500 font-semibold">Added to favourites!</p>}
                                 </div>
 
                                 <div className="mb-8 bg-orange-50 p-6 rounded-lg">
