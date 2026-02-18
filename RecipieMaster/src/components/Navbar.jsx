@@ -47,6 +47,16 @@ const Navbar = () => {
                             About
                         </NavLink>
                         <NavLink
+                            to="/favourites"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? 'border-b-2 border-white pb-1 font-semibold'
+                                    : 'hover:border-b-2 hover:border-orange-100 pb-1 transition'
+                            }
+                        >
+                            Favourites
+                        </NavLink>
+                        <NavLink
                             to="/create-recipes"
                             className={({ isActive }) =>
                                 isActive
