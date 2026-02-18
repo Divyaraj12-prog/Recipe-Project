@@ -102,7 +102,6 @@ const SingleRecipe = () => {
                                     >
                                         {isFavourite.includes(recipe.id) ? (
                                             <span className="text-red-500">❤</span>
-                                            
                                         ) : (
                                             <span className="text-gray-400 hover:text-red-400">♡ <span className='text-2xl'>Add to Favourites</span></span>
                                         )}
