@@ -20,7 +20,7 @@ const Fav = () => {
                     <p className="text-orange-100 mt-2">
                         {favouriteRecipes.length === 0 
                             ? "Start adding your favorite recipes!" 
-                            : `You have ${favouriteRecipes.length} favourite recipe${favouriteRecipes.length !== 1 ? 's' : ''}`}
+                            : `You have ${favouriteRecipes.length} Favourite Recipe${favouriteRecipes.length !== 1 ? 's' : ''}`}
                     </p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ const Fav = () => {
                                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
                             >
                               
-                                <div className="relative h-48 overflow-hidden bg-gray-200">
+                                <div className="relative h-48 overflow-hidden bg-gray-200 capitalize">
                                     <img
                                         src={recipe.image}
                                         alt={recipe.title}
@@ -55,18 +55,18 @@ const Fav = () => {
                                     <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
                                         ❤ Favourite
                                     </div>
-                                    <div className="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    <div className="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold capitalize">
                                         {recipe.category}
                                     </div>
                                 </div>
 
                         
                                 <div className="p-5">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2">{recipe.title}</h3>
+                                    <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 capitalize">{recipe.title}</h3>
 
-                                    <p className="text-sm text-gray-600 mb-3">by <span className="font-semibold">{recipe.chef}</span></p>
+                                    <p className="text-sm text-gray-600 mb-3">by <span className="font-semibold capitalize">{recipe.chef}</span></p>
 
-                                    <p className="text-gray-700 text-sm mb-4 line-clamp-2">{recipe.description}</p>
+                                    <p className="text-gray-700 text-sm mb-4 line-clamp-2 capitalize">{recipe.description}</p>
 
                              
                                     <button
