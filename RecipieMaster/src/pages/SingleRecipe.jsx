@@ -15,7 +15,9 @@ const SingleRecipe = () => {
     const deleteHandler = (id) => {
         const updatedData = data.filter(recipe => recipe.id !== id);
         setdata(updatedData);
+        setisFavourite(isFavourite.filter(fav => fav.id !== id));
         localStorage.setItem("data", JSON.stringify(updatedData));
+        localStorage.removeItem("favourite");
         navigate('/recipes');
     }
 

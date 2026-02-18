@@ -48,7 +48,6 @@ const Create = () => {
             ingredients: formData.ingredients,
             instructions: formData.instructions.trim()
         };
-        console.log(newRecipe);
         
         setdata([...data, newRecipe]);
         localStorage.setItem("data", JSON.stringify([...data, newRecipe]));
