@@ -5,8 +5,8 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
-        <nav className="bg-orange-500 text-white shadow-lg sticky top-0 z-50 ">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="bg-orange-500 text-white shadow-lg sticky top-0 z-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
                 <div className="flex justify-between items-center h-16">
                     
                     <div className="flex items-center">
@@ -44,7 +44,7 @@ const Navbar = () => {
                                     : 'hover:border-b-2 hover:border-orange-100 pb-1 transition'
                             }
                         >
-                            About
+                            About           
                         </NavLink>
                         <NavLink
                             to="/favourites"
@@ -82,7 +82,7 @@ const Navbar = () => {
 
             
             {isMenuOpen && (
-                <div className="md:hidden bg-orange-600 px-4 pt-2 pb-4 space-y-3">
+                <div className="md:hidden bg-orange-600 px-4 pt-2 pb-4 space-y-3 ">
                     <NavLink
                         to="/"
                         onClick={() => setIsMenuOpen(false)}
@@ -116,6 +116,16 @@ const Navbar = () => {
                     >
                         About
                     </NavLink>
+                    <NavLink
+                            to="/favourites"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? 'block py-2 px-3 bg-orange-700 rounded-lg font-semibold'
+                                    : 'block py-2 px-3 hover:bg-orange-700 rounded-lg transition'
+                            }
+                        >
+                            Favourites
+                        </NavLink>
                     <NavLink
                         to="/create-recipes"
                         onClick={() => setIsMenuOpen(false)}

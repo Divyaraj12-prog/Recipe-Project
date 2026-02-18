@@ -34,14 +34,21 @@ const SingleRecipe = () => {
         toast.success("Recipe updated successfully!")
     }
 
-    const favourite = (id) => {
-        if (isFavourite.includes(id)) {
-            const updatedFavourites = isFavourite.filter(fav => fav !== id);
+    const favourite = (recipe) => {
+        if (isFavourite.includes(recipe)) {
+            const updatedFavourites = isFavourite.filter(fav => fav.id !== recipe.id);
             setisFavourite(updatedFavourites);
             localStorage.setItem("favourite", JSON.stringify(updatedFavourites));
+            navigate('/recipes');
         } else {
-            setisFavourite([...isFavourite, id]);
-            localStorage.setItem("favourite", JSON.stringify([...isFavourite, id]));
+            setisFavourite([...isFavourite, recipe]);
+            localStorage.setItem("favourite", JSON.stringify([...isFavourite, recipe]));
+            navigate('/favourites');
+            toast.success("Recipe added to favourites!",{
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: true
+            })
         }
     }
     
@@ -97,16 +104,16 @@ const SingleRecipe = () => {
 
                                 <div className="flex items-center gap-4 mb-8">
                                     <button 
-                                        onClick={() => favourite(recipe.id)}
+                                        onClick={() => favourite(recipe)}
                                         className="text-4xl transition-all duration-300 hover:scale-110 cursor-pointer"
                                     >
-                                        {isFavourite.includes(recipe.id) ? (
+                                        {isFavourite.includes(recipe) ? (
                                             <span className="text-red-500">❤</span>
                                         ) : (
                                             <span className="text-gray-400 hover:text-red-400">♡ <span className='text-2xl'>Add to Favourites</span></span>
                                         )}
                                     </button>
-                                    {isFavourite.includes(recipe.id) && <p className="text-red-500 font-semibold">Added to favourites!</p>}
+                                    {isFavourite.includes(recipe) && <p className="text-red-500 font-semibold">Added to favourites!</p>}
                                 </div>
 
                                 <div className="mb-8 bg-orange-50 p-6 rounded-lg">
